@@ -1,0 +1,60 @@
+{
+  "protocol": "https://aratta.me/playv1/",
+  "published": true,
+  "types": {
+    "album": {
+      "schema": "https://aratta.me/schemas/albumSchema",
+      "dataFormats": ["application/json"]
+    },
+    "song": {
+      "schema": "https://aratta.me/schemas/songSchema",
+      "dataFormats": ["application/json"]
+    }
+  },
+  "structure": {
+    "album": {
+      "$actions": [
+        {
+          "who": "anyone",
+          "can": "read"
+        },
+        {
+          "who": "anyone",
+          "can": "write"
+        },
+        {
+          "who": "author",
+          "of": "album",
+          "can": "delete"
+        },
+        {
+          "who": "author",
+          "of": "album",
+          "can": "update"
+        }
+      ]
+    },
+    "song": {
+      "$actions": [
+        {
+          "who": "anyone",
+          "can": "read"
+        },
+        {
+          "who": "anyone",
+          "can": "write"
+        },
+        {
+          "who": "author",
+          "of": "song",
+          "can": "delete"
+        },
+        {
+          "who": "author",
+          "of": "song",
+          "can": "update"
+        }
+      ]
+    }
+  }
+}

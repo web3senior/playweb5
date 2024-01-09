@@ -1,0 +1,32 @@
+.card {
+  position: relative;
+  background: rgba(255,255,255,.1);
+  backdrop-filter: blur(8px);
+  border-radius: var(--global-border-radius);
+  padding: 6px;
+  border: 1px solid #5a5a5c;
+  color: #d4d0d0;
+  
+  &__header {
+    padding: 0.4rem  0;
+    font-size: 0.8rem;
+  
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+    border-bottom: 1px solid #161615;
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+  }
+
+  &__body {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 1rem 0.5rem;
+  }
+
+  &[data-margin='auto'] {
+    max-width: 480px;
+    margin: 0 auto;
+  }
+}
